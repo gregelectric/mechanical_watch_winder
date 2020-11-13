@@ -27,20 +27,26 @@ const int stepsPerRevolution = 100;  // change this to fit the number of steps p
 Stepper myStepper(stepsPerRevolution, 4, 6, 5, 7);
 
 int stepCount = 0;  // number of steps the motor has taken
+int motorSpeed = 200;
+int num_steps = 1500;
 
-void setup() {
-  // nothing to do inside the setup
+void setup() 
+{
+  myStepper.setSpeed(motorSpeed);
 }
 
-void loop() {
-  // read the sensor value:
-  //int sensorReading = analogRead(A0);
-  // map it to a range from 0 to 100:
-  //int motorSpeed = map(sensorReading, 0, 1023, 0, 100);
-  int motorSpeed = 100;
-  // set the motor speed:
-  if (motorSpeed > 0) {
-    myStepper.setSpeed(motorSpeed);
+void loop() 
+{
+  // Clockwise
+  for(int i = 0; i < num_steps; i++)
+  {
+    // step 1/100 of a revolution:
+    myStepper.step(stepsPerRevolution / 100);
+  }
+
+  // Counter Clockwise
+  for(int i = 0; i < num_steps; i++)
+  {
     // step 1/100 of a revolution:
     myStepper.step(-stepsPerRevolution / 100);
   }
