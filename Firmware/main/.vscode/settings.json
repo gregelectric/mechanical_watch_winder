@@ -1,0 +1,15 @@
+{
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+        "xlocinfo": "cpp",
+        "initializer_list": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp",
+        "fstream": "cpp",
+        "ios": "cpp",
+        "limits": "cpp",
+        "xlocale": "cpp",
+        "xstddef": "cpp"
+    },
+}
