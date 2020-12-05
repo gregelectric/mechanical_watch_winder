@@ -27,7 +27,7 @@ const int stepsPerRevolution = 100;  // change this to fit the number of steps p
 Stepper myStepper(stepsPerRevolution, 4, 6, 5, 7);
 
 int stepCount = 0;  // number of steps the motor has taken
-int motorSpeed = 200;
+int motorSpeed = 100;
 int num_steps = 1500;
 
 void setup() 
@@ -44,10 +44,14 @@ void loop()
     myStepper.step(stepsPerRevolution / 100);
   }
 
+  delay(60000);
+  
   // Counter Clockwise
   for(int i = 0; i < num_steps; i++)
   {
     // step 1/100 of a revolution:
     myStepper.step(-stepsPerRevolution / 100);
   }
+
+  delay(60000);
 }
