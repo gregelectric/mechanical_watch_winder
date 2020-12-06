@@ -3,17 +3,18 @@
  Stepper Motor Control - speed control
 
  This program drives a unipolar or bipolar stepper motor.
- The motor is attached to digital pins 8 - 11 of the Arduino.
- A potentiometer is connected to analog input 0.
+ The motor is attached to digital pins 4 - 7 of the Arduino.
 
- The motor will rotate in a clockwise direction. The higher the potentiometer value,
- the faster the motor speed. Because setSpeed() sets the delay between steps,
- you may notice the motor is less responsive to changes in the sensor value at
- low speeds.
+ The motor will rotate in a clockwise, turn elements off, and pause for 60 seconds;
+ then rotate counter clockwise, turn elements off, and pause for 60 seconds.
+ The result is 650 rotations per day.
 
  Created 30 Nov. 2009
  Modified 28 Oct 2010
  by Tom Igoe
+
+ Modified 6 Dec 2020
+ by Greg Powell
 
  */
 
