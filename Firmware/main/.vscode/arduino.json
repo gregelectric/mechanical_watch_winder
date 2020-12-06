@@ -1,6 +1,0 @@
-{
-    "programmer": "AVR ISP",
-    "board": "CONTROLLINO_Boards:avr:controllino_maxi",
-    "sketch": "main.ino",
-    "port": "COM3"
-}
